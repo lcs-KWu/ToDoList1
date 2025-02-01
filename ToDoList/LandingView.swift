@@ -69,7 +69,8 @@ struct LandingView: View {
     }
 }
 
-#Preview {
-    ItemView(currentItem: Binding.constant(firstItem))
-}
+//#Preview {
+ //   LandingView()
+//}
+
 

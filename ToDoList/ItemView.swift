@@ -4,7 +4,7 @@
 //
 //  Created by Yixuan Wu on 2025-02-01.
 //
-
+import SwiftData
 import SwiftUI
 
 struct ItemView: View {
@@ -21,6 +21,6 @@ struct ItemView: View {
     }
 }
 
-#Preview {
-    ItemView(currentItem: Binding.constant(firstItem))
-}
+//#Preview {
+    //ItemView(currentItem: Binding.constant(firstItem))
+//}
