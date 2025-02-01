@@ -18,7 +18,7 @@ struct LandingView: View {
         NavigationView{
             VStack{
                 List(todos){ todo in
-                    ItemView(currentItem: firstItem)
+                    ItemView(currentItem: todo)
                     
                 }
                 .searchable(text: $SearchText)
@@ -26,8 +26,10 @@ struct LandingView: View {
                 HStack{
                     TextField("enter a task", text: $newItemDescription)
                     Button("add"){
-                        //add the new todo item
+                        // Add the new to-do item
+                        createToDo(withTitle: newItemDescription)
                     }
+                    .disabled(newItemDescription.isEmpty == true)
                 }
                 .padding(20)
             }
@@ -35,6 +37,18 @@ struct LandingView: View {
             
         }
         
+    }
+    // MARK: Functions
+    func createToDo(withTitle title: String) {
+        
+        // Create the new to-do item instance
+        let todo = TodoItem(
+            title: title,
+            done: false
+        )
+        
+        // Append to the array
+        todos.append(todo)
     }
 }
 
