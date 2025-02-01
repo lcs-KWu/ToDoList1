@@ -17,9 +17,7 @@ struct LandingView: View {
             VStack{
                 List{
                     
-                    Label(title: {Text("Study For Chemistry")}, icon: {
-                        Image(systemName: "circle")
-                    })
+                    ItemView(title:"Study for chem", done: true)
                     Label(title: {Text("Study For Math")}, icon: {
                         Image(systemName: "circle")
                     })
@@ -47,4 +45,15 @@ struct LandingView: View {
 
 #Preview {
     LandingView()
+}
+
+struct ItemView: View {
+    //MARK: stored proerties
+    let title: String
+    let done: Bool
+    var body: some View {
+        Label(title: {Text(title)}, icon: {
+            Image(systemName: "circle")
+        })
+    }
 }
