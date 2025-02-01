@@ -11,11 +11,13 @@ struct LandingView: View {
     @State var newItemDescription = ""
     //search text
     @State var SearchText = ""
+    //todo list
+    @State var todos: [TodoItem] = exampleItem
     
     var body: some View {
         NavigationView{
             VStack{
-                List{
+                List(todos){ todo in
                     ItemView(currentItem: firstItem)
                     
                 }

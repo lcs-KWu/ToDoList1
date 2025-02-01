@@ -14,9 +14,9 @@ struct TodoItem:Identifiable {
 }
 
 let firstItem = TodoItem(title: "study", done: true)
-let secondItem = TodoItem(title: "study", done: true)
+let secondItem = TodoItem(title: "eat", done: true)
 
 let exampleItem = [
     firstItem,
-    secondItem,
+    secondItem
 ]
