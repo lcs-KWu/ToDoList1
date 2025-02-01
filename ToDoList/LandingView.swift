@@ -11,14 +11,22 @@ struct LandingView: View {
     @State var newItemDescription = ""
     //search text
     @State var SearchText = ""
-
+    
     var body: some View {
         NavigationView{
             VStack{
                 List{
-                    Text("Study For Chemistry")
-                    Text("Study For Math")
-                    Text("Study For Economics")
+                    
+                    Label(title: {Text("Study For Chemistry")}, icon: {
+                        Image(systemName: "circle")
+                    })
+                    Label(title: {Text("Study For Math")}, icon: {
+                        Image(systemName: "circle")
+                    })
+                    Label(title: {Text("Study For Economics")}, icon: {
+                        Image(systemName: "circle")
+                    })
+                    
                 }
                 .searchable(text: $SearchText)
                 
@@ -31,7 +39,7 @@ struct LandingView: View {
                 .padding(20)
             }
             .navigationTitle("To-do")
-
+            
         }
         
     }
