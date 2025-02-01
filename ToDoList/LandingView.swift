@@ -11,6 +11,8 @@ struct LandingView: View {
     @State var newItemDescription = ""
     //search text
     @State var SearchText = ""
+    //Access the model contant
+    @Environment(\.modelContext) var modelContext
     //todo list
     @State var todos: [TodoItem] = exampleItem
     
