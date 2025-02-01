@@ -16,14 +16,7 @@ struct LandingView: View {
         NavigationView{
             VStack{
                 List{
-                    
-                    ItemView(title:"Study for chem", done: true)
-                    Label(title: {Text("Study For Math")}, icon: {
-                        Image(systemName: "circle")
-                    })
-                    Label(title: {Text("Study For Economics")}, icon: {
-                        Image(systemName: "circle")
-                    })
+                    ItemView(currentItem: firstItem)
                     
                 }
                 .searchable(text: $SearchText)
