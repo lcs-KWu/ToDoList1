@@ -53,7 +53,7 @@ struct ItemView: View {
     let done: Bool
     var body: some View {
         Label(title: {Text(title)}, icon: {
-            Image(systemName: "circle")
+            Image(systemName: done == true ? "checkmark.circle": "circle")
         })
     }
 }
