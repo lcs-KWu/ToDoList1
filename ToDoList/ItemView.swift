@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ItemView: View {
     //MARK: stored proerties
-    @Binding var currentItem: TodoItem
+    @Bindable var currentItem: TodoItem
     var body: some View {
         Label(title: {TextField("Enter a to-do item", text: $currentItem.title, axis: .vertical)}, icon: {
             Image(systemName: currentItem.done == true ? "checkmark.circle": "circle")
@@ -21,6 +21,7 @@ struct ItemView: View {
     }
 }
 
-//#Preview {
-    //ItemView(currentItem: Binding.constant(firstItem))
-//}
+#Preview {
+    LandingView()
+    .modelContainer(TodoItem.preview)
+}
